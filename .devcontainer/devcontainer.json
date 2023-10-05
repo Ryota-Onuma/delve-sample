@@ -1,0 +1,15 @@
+{
+    "name": "go-server",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "go-server", 
+    "remoteUser": "test-user",
+    "workspaceFolder": "/home/test-user/workspace",
+    "mounts": [
+        { 
+            "source": ".devcontainer/scripts/post-start-command.sh",
+            "target": "/home/test-user/workspace/.devcontainer/scripts/post-start-command.sh",
+            "type": "bind" 
+        }
+    ],
+    "postStartCommand": "bash .devcontainer/scripts/post-start-command.sh"
+}
