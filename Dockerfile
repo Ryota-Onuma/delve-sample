@@ -8,7 +8,6 @@ RUN go mod download
 
 COPY . .
 
-# test-user作成
 RUN useradd -m test-user
 
 USER test-user
